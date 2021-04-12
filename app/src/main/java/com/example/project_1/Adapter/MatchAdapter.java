@@ -46,6 +46,8 @@ public class MatchAdapter extends RecyclerView.Adapter<MatchAdapter.ViewHolder> 
         team2.setText(match.getTeam_2());
         TextView date = holder.date;
         date.setText(match.getDate());
+        TextView id = holder.id;
+        id.setText(match.getId());
 
 
     }
@@ -59,12 +61,14 @@ public class MatchAdapter extends RecyclerView.Adapter<MatchAdapter.ViewHolder> 
         public TextView team1;
         public TextView team2;
         public TextView date;
+        public TextView id;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             team1 = (TextView) itemView.findViewById(R.id.team1);
             team2 = (TextView) itemView.findViewById(R.id.team2);
             date = (TextView) itemView.findViewById(R.id.date);
+            id = (TextView) itemView.findViewById(R.id.unique_id);
         }
     }
 }

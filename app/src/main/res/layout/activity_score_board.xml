@@ -46,20 +46,70 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
+                <LinearLayout
+                    android:id="@+id/teamname"
+                    android:layout_width="fill_parent"
+                    android:layout_height="30dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/internalLayout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tvTeamName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@+id/summary"
+                            android:layout_alignParentLeft="true"
+                            android:text="Team 1"
+                            android:textSize="20dp"
+                            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+                        <TextView
+                            android:id="@+id/vs"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@+id/summary"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginLeft="30dp"
+                            android:text="vs"
+                            android:textSize="20dp"
+                            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+
+                        <TextView
+                            android:id="@+id/tvTeamScore"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginLeft="20dp"
+                            android:layout_toRightOf="@+id/tvTeamName"
+                            android:text="Team 2"
+                            android:textSize="20dp"
+                            android:textAppearance="?android:attr/textAppearanceSmall" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
                 <RelativeLayout
                     android:layout_width="fill_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="30dp">
 
                     <TextView
                         android:id="@+id/description"
                         android:layout_width="257dp"
                         android:layout_height="wrap_content"
-                        android:layout_alignLeft="@+id/summary"
+                        android:layout_alignRight="@+id/textView"
                         android:layout_alignParentRight="true"
                         android:layout_alignParentTop="true"
                         android:layout_column="1"
                         android:layout_columnSpan="1"
                         android:layout_row="0"
+                        android:textSize="20dp"
                         android:layout_rowSpan="1"
                         android:layout_weight="1"
                         android:text="Summary" />
@@ -73,32 +123,33 @@
                         android:layout_alignParentTop="true"
                         android:layout_column="0"
                         android:layout_row="0"
-                        android:text="Description:"
+                        android:textSize="20dp"
+                        android:text="Description : "
                         android:textAppearance="?android:attr/textAppearanceSmall" />
 
-                    <TextView
-                        android:id="@+id/summary"
-                        android:layout_width="fill_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_alignTop="@+id/textView2"
-                        android:layout_column="1"
-                        android:layout_marginLeft="5dp"
-                        android:layout_row="1"
-                        android:layout_toRightOf="@+id/textView2"
-                        android:layout_weight="1"
-                        android:text="Status Loading" />
+                    <!--                    <TextView-->
+                    <!--                        android:id="@+id/summary"-->
+                    <!--                        android:layout_width="fill_parent"-->
+                    <!--                        android:layout_height="wrap_content"-->
+                    <!--                        android:layout_alignTop="@+id/textView2"-->
+                    <!--                        android:layout_column="1"-->
+                    <!--                        android:layout_marginLeft="5dp"-->
+                    <!--                        android:layout_row="1"-->
+                    <!--                        android:layout_toRightOf="@+id/textView2"-->
+                    <!--                        android:layout_weight="1"-->
+                    <!--                        android:text="Status Loading" />-->
 
-                    <TextView
-                        android:id="@+id/textView2"
-                        android:layout_width="71dp"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentLeft="true"
-                        android:layout_below="@+id/description"
-                        android:layout_column="0"
-                        android:layout_marginTop="10dp"
-                        android:layout_row="1"
-                        android:text="Status:"
-                        android:textAppearance="?android:attr/textAppearanceSmall" />
+                    <!--                    <TextView-->
+                    <!--                        android:id="@+id/textView2"-->
+                    <!--                        android:layout_width="71dp"-->
+                    <!--                        android:layout_height="wrap_content"-->
+                    <!--                        android:layout_alignParentLeft="true"-->
+                    <!--                        android:layout_below="@+id/description"-->
+                    <!--                        android:layout_column="0"-->
+                    <!--                        android:layout_marginTop="10dp"-->
+                    <!--                        android:layout_row="1"-->
+                    <!--                        android:text="Status:"-->
+                    <!--                        android:textAppearance="?android:attr/textAppearanceSmall" />-->
 
                 </RelativeLayout>
 
@@ -116,34 +167,6 @@
                         android:layout_height="64dp"
                         android:orientation="vertical">
 
-                        <LinearLayout
-                            android:id="@+id/internalLayout"
-                            android:layout_width="fill_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="horizontal">
-
-                            <TextView
-                                android:id="@+id/tvTeamName"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_alignBottom="@+id/summary"
-                                android:layout_alignParentLeft="true"
-                                android:layout_marginBottom="26dp"
-                                android:text="Small Text"
-                                android:textAppearance="?android:attr/textAppearanceSmall" />
-
-                            <TextView
-                                android:id="@+id/tvTeamScore"
-                                android:layout_width="fill_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_alignParentRight="true"
-                                android:layout_alignParentTop="true"
-                                android:layout_marginLeft="20dp"
-                                android:layout_toRightOf="@+id/tvTeamName"
-                                android:text="Small Text"
-                                android:textAppearance="?android:attr/textAppearanceSmall" />
-                        </LinearLayout>
-
                     </LinearLayout>
                 </ScrollView>
 
@@ -157,7 +180,19 @@
                         android:layout_height="wrap_content"
                         android:layout_alignParentLeft="true"
                         android:layout_alignParentTop="true"
-                        android:text="Current Inning"
+                        android:textSize="30dp"
+                        android:text="Score : "
+                        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                    <TextView
+                        android:id="@+id/score"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@id/tvCurrentInning"
+                        android:textSize="30dp"
+                        android:text="text "
                         android:textAppearance="?android:attr/textAppearanceLarge" />
 
                     <TableLayout

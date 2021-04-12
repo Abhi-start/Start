@@ -5,6 +5,7 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/card_view"
+        android:onClick="ShowMatchDetails"
         android:layout_gravity="center"
         android:layout_width="match_parent"
         android:layout_height="250px"
@@ -13,6 +14,15 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/unique_id"
+                android:layout_centerHorizontal="true"
+                android:padding="10px"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="date value"
+                android:visibility="invisible"
+                android:textSize="40px"></TextView>
 
             <TextView
                 android:id="@+id/date"
